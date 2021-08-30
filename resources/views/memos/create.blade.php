@@ -1,27 +1,17 @@
-@extends('layouts.app')
+@extends('tests.test')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">◯月△日</div>
-
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                    
-                    <!-- <p id='parent'></p>
-                    <br>
-                    <button id='btn' class='card'>+（ここを押すとモーダル表示→テーマ選択→カード追加）</button><br> -->
-                    
-
-
-
-
                     <form action="{{ route('memos.store') }}" method="POST">
                     @csrf
                     <p id='parent'></p>
@@ -34,14 +24,6 @@
                     <input type="submit" value = 'save'>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
             </div>
         </div>
     </div>

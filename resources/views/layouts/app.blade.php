@@ -72,9 +72,19 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <div>
+            <main class="py-4">
+                <div style='display:flex'>
+                    @yield('sidebar')
+                    @yield('content')
+                </div>
+            </main>
+        </div>
+
+
+
+
+
     </div>
 </body>
 </html>
